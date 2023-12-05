@@ -1,0 +1,23 @@
+{
+  "extends": [ "config:best-practices"],
+  "packageRules": [
+    {
+      "enabled": false,
+      "matchPackagePatterns": ["*"]
+    }
+  ],
+  "major": {
+    "dependencyDashboardApproval": true,
+    "addLabels": [
+      "major-upgrade"
+    ]
+  },
+  "vulnerabilityAlerts": {
+    "groupName": "{{{vulnerabilitySeverity}}} vulnerable dependencies",
+    "enabled": true,
+    "labels": [
+      "security"
+    ]
+  },
+  "osvVulnerabilityAlerts": true
+}
